@@ -8,7 +8,7 @@ cover: "/images/HowToMakeThisBlog/is_published.png"
 
 ![Published blog on github pages](/images/HowToMakeThisBlog/is_published.png)
 
-**Note**: I've got my [github.io](https://github.com/ravencole/ravencole.github.io) repository hooked up do a domain name, [this](https://dev.to/nickymarino/pointing-a-github-pages-repo-to-a-hover-domain-105e) blog post has an implementation that should work for you.
+**Note**: I've got my [github.io](https://github.com/ravencole/ravencole.github.io) repository hooked up to a domain name, [this](https://dev.to/nickymarino/pointing-a-github-pages-repo-to-a-hover-domain-105e) blog post has an implementation that should work for you.
 
 ## The Plan
 We want to use [Hugo](https://gohugo.io/) to run a static site from [GitHub Pages](https://pages.github.com/). This topic is well covered across the internet, but this is how I got mine up and running with minimal configuration.
