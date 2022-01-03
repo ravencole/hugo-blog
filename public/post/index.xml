@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Your site title</title>
+    <title>Posts on Raven Cole</title>
     <link>https://ravencole.com/post/</link>
-    <description>Recent content in Posts on Your site title</description>
+    <description>Recent content in Posts on Raven Cole</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jan 2022 11:40:01 -0500</lastBuildDate><atom:link href="https://ravencole.com/post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,7 @@
       <pubDate>Mon, 03 Jan 2022 11:40:01 -0500</pubDate>
       
       <guid>https://ravencole.com/post/howtomakethisblog/</guid>
-      <description>Just gonna jot some notes down about how I got this running.
-The Plan We want to use Hugo to run a static site from Github Pages. This topic is well covered across the internet, but this is how I got mine up and running with minimal configuration.
-Setting Up the Repositories This setup requires two repositories, the hugo site that we use for development, and the repository that we&amp;rsquo;ll use for hosting the static content.</description>
+      <description>Simple, simple guide to getting a Hugo blog running on GitHub Pages</description>
     </item>
     
   </channel>
