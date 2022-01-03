@@ -6,25 +6,16 @@
     <description>Recent content in Posts on Raven Cole Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jan 2022 11:17:06 -0500</lastBuildDate><atom:link href="https://ravencole.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 11:40:01 -0500</lastBuildDate><atom:link href="https://ravencole.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Second Post</title>
-      <link>https://ravencole.github.io/post/secondpost/</link>
-      <pubDate>Mon, 03 Jan 2022 11:17:06 -0500</pubDate>
+      <title>How to make this blog</title>
+      <link>https://ravencole.github.io/post/howtomakethisblog/</link>
+      <pubDate>Mon, 03 Jan 2022 11:40:01 -0500</pubDate>
       
-      <guid>https://ravencole.github.io/post/secondpost/</guid>
-      <description>The Second Post has arrived! OK, well it doesn&amp;rsquo;t seem like the subtitle works very well on this theme&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>My Post</title>
-      <link>https://ravencole.github.io/post/mypost/</link>
-      <pubDate>Mon, 03 Jan 2022 11:10:16 -0500</pubDate>
-      
-      <guid>https://ravencole.github.io/post/mypost/</guid>
-      <description>Hello World This is the first post.
-And lets make sure the syntax highlighting works.
-console.log( [1,,2,3,4,5].reduce((a,b) =&amp;gt; a + b, 0) ) </description>
+      <guid>https://ravencole.github.io/post/howtomakethisblog/</guid>
+      <description>Just gonna jot some notes down about how I got this running.
+The Plan We want to use Hugo to run a static site from Github Pages. This topic is well covered across the internet, but this is how I got mine up and running with minimal configuration.
+Setting Up the Repositories This setup requires two repositories, the hugo site that we use for development, and the repository that we&amp;rsquo;ll use for hosting the static content.</description>
     </item>
     
   </channel>

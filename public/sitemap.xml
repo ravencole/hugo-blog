@@ -2,17 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ravencole.github.io/post/howtomakethisblog/</loc>
+    <lastmod>2022-01-03T11:40:01-05:00</lastmod>
+  </url><url>
     <loc>https://ravencole.github.io/post/</loc>
-    <lastmod>2022-01-03T11:17:06-05:00</lastmod>
+    <lastmod>2022-01-03T11:40:01-05:00</lastmod>
   </url><url>
     <loc>https://ravencole.github.io/</loc>
-    <lastmod>2022-01-03T11:17:06-05:00</lastmod>
-  </url><url>
-    <loc>https://ravencole.github.io/post/secondpost/</loc>
-    <lastmod>2022-01-03T11:17:06-05:00</lastmod>
-  </url><url>
-    <loc>https://ravencole.github.io/post/mypost/</loc>
-    <lastmod>2022-01-03T11:10:16-05:00</lastmod>
+    <lastmod>2022-01-03T11:40:01-05:00</lastmod>
   </url><url>
     <loc>https://ravencole.github.io/categories/</loc>
   </url><url>

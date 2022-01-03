@@ -141,3 +141,8 @@ git push origin main
 ## Viewing the site live on GitHub Pages
 
 Pushing to the `main` branch on the github.io repository should trigger GitHub to start building the site. If you navigate to the repository and go to `Settings/Pages`, you should see an alert explaining that your site is ready to be published. You won't find anything at the URL provided there until you see the alert that says "Your site has been published...". This could take a few minutes. Once you see the alert, click the link and you should see the main list page of your hugo site. 
+
+## Wrapping up
+
+Now, the sky is the limit. The first thing I'd recommend doing is adding a custom URL to your blog.
+For example, i've set [https://ravencole.com](https://ravencole.com) to redirect to my Hugo blog. 

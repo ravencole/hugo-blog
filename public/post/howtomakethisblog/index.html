@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>How to make this blog &middot; Raven Cole Blog</title>
+
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Raven Cole Blog" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Raven Cole Blog</h2>
+					
+				</a>
+				<ul>
+    
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-01-03 11:40:01 -0500 EST">January 3, 2022</time>
+</div>
+
+		<h1 class="post-title">How to make this blog</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>Just gonna jot some notes down about how I got this running.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>We want to use Hugo to run a static site from Github Pages. This topic is well covered across the internet, but this is how I got mine up and running with minimal configuration.</p>
+<h2 id="setting-up-the-repositories">Setting Up the Repositories</h2>
+<p>This setup requires two repositories, the hugo site that we use for development, and the repository that we&rsquo;ll use for hosting the static content.</p>
+<p>Navigate to github and create two repositories, one called <code>blog</code> (or whatever you would like yours to be called), and the other called <code>{your_github_username}.github.io</code>.
+For example, mine is called <code>ravencole.github.io</code>.</p>
+<p>I&rsquo;ve created a new directory in my <code>~/Projects</code> folder called <code>Blog</code>, enter the directory and we&rsquo;ll init the hugo site.
+Locally, this is what our directory structure is going to look like:</p>
+<pre tabindex="0"><code>~/Projects
+  |- Blog
+    |- blog
+    |- ravencole.github.io
+</code></pre><p>From inside the <code>~/Projects/Blog</code> directory, run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site blog
+</code></pre></div><p>Now we need to connect the hugo site to the <code>blog</code> repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
+git init
+git remote add origin git@github.com:ravencole/hugo-blog.git
+git checkout -b main
+git add .
+git commit -m <span style="color:#e6db74">&#34;init&#34;</span>
+git push -u origin main
+</code></pre></div><p>Back out of the <code>blog</code> repository back to <code>~/Projects/Blog</code>, and we&rsquo;ll clone the github pages repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github:ravencole/ravencole.github.io
+git checkout -b main
+</code></pre></div><p>That&rsquo;s all for that repository for the time being. Once we have something to push to the blog we&rsquo;ll come back to it.</p>
+<h2 id="selecting-a-theme">Selecting a theme</h2>
+<p>We&rsquo;re going to use the <a href="https://github.com/EmielH/tale-hugo">Tale</a> theme, for ease of use.</p>
+<p>Navigate to the <code>blog</code> repository and clone the tale theme:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/EmielH/tale-hugo themes/tale
+</code></pre></div><p>Next, edit your <code>config.toml</code> file to include: <code>theme = 'tale'</code></p>
+<p>This is actually all that we need in order to bring up the hugo development server. From the <code>blog</code> directory we&rsquo;ll run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -t tale
+</code></pre></div><p>You should now be able to see your site at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
+<h2 id="create-our-first-post">Create our first post</h2>
+<p>We can use the hugo cli tool to create posts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new post/MyFirstPost.md
+</code></pre></div><p>There should now be a markdown file at <code>./content/post/MyFirstPost.md</code>.</p>
+<p>The content should contain only:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;MyFirstPost&#34;
+date: 2022-01-03T11:40:01-05:00 // or whatever your current timestamp is
+draft: true
+---
+</code></pre></div><p>Edit the title parameter to be something like &ldquo;My First Post&rdquo;, remove the <code>draft</code> parameter, and add some content below the configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;My First Post&#34;
+date: 2022-01-03T11:40:01-05:00
+---
+
+Hello, World.
+
+We&#39;re up and running!
+</code></pre></div><p>Your hugo server should have re-compiled and this post should show up on the main page of your development site.</p>
+<h2 id="generating-the-static-assets">Generating the static assets</h2>
+<p>Now that we have a blog post we want to publish, lets compile our assets and push them up to the repo we&rsquo;re hosting our static site on.</p>
+<p>Still in the <code>blog</code> directory, run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -t tale
+</code></pre></div><p>There is now a <code>public</code> directory in the root of our project that contains the compiled static assets.</p>
+<p>Now is a good time to commit what we have and push it up to the blog repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#e6db74">&#34;Added first blog post&#34;</span>
+git push origin main
+</code></pre></div><p>Next, lets take the compiled assets and add them to the github.io repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ../ravencole.github.io
+cp -r ../blog/public/* ./
+git add .
+git commit -m <span style="color:#e6db74">&#34;Added first blog post&#34;</span>
+git push origin main
+</code></pre></div><h2 id="viewing-the-site-live-on-github-pages">Viewing the site live on GitHub Pages</h2>
+<p>Pushing to the <code>main</code> branch on the github.io repository should trigger GitHub to start building the site. If you navigate to the repository and go to <code>Settings/Pages</code>, you should see an alert explaining that your site is ready to be published. You won&rsquo;t find anything at the URL provided there until you see the alert that says &ldquo;Your site has been published&hellip;&rdquo;. This could take a few minutes. Once you see the alert, click the link and you should see the main list page of your hugo site.</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-01-03 12:25:48.288664 -0500 EST m=&#43;0.042401168">2022</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
