@@ -4,6 +4,9 @@ title: "How to make this blog"
 date: 2022-01-03T11:40:01-05:00
 ---
 
+![Ready to be Published](/images/HowToMakeThisBlog/ready_to_be_published.png)
+![Is Published](/images/HowToMakeThisBlog/is_published.png)
+
 Just gonna jot some notes down about how I got this running.
 
 ## The Plan
