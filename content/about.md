@@ -8,4 +8,4 @@ _build:
 
 Not sure what all is going to go on here. I'll probably post programming projects and tips that I want quick access to.
 
-Hit me up on [GitHub](https://github.com/ravencole) or send me an [email](mailto:ravenscole@gmail.com).
+Visit me on [GitHub](https://github.com/ravencole) or send me an [email](mailto:ravenscole@gmail.com).
