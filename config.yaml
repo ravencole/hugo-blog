@@ -5,3 +5,11 @@ theme: tale
 
 author:
   name: "Raven Cole"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      title: About
+      url: /about/
+      weight: 0
